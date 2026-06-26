@@ -2,64 +2,53 @@
      padding: 0px;
      margin: 0px;
  }
-
- .nav-container {
-     height: 100%;
-     max-height: auto;
-     width: 100%;
-     padding: 15px;
-     display: flex;
-     flex-direction: column;
-     gap: 15px;
-
+ .nav-container{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding:2em 8em 2em ;
+    color:white;
  }
-
- @media (max-width:768px) {
+@media(max-width){
      .nav-container {
-         flex-direction: row;
+         flex-direction:column;
+         padding:2em 4em 2em ;
      }
  }
-
- #nav-logo {
-     width: 60px;
-     height: 20px;
-     margin-left: 80px;
-     padding-top: 30px;
+ #nav-logo{
+    width:100%;
+    max-width:60px;
+    height:100% ;
+    max-height:20px ;
+    padding-right:20px;
  }
-
- .nav-list {
-     display: flex;
-     list-style: none;
-     box-sizing: border-box;
-     justify-content: center;
-     align-items: center;
-     /* margin-left:520px; */
+ @media(max-width){
+    #nav-logo{
+        padding-left:20px;
+    }
  }
-
- @media (max-width:768px) {
-     .nav-list {
-         flex-direction: row;
-     }
+ .nav-list{
+    display: flex;
+    flex-direction: row;
+    gap:1.8em;
+    list-style: none;
+    font-size:1.1em;
+    font-family: sans-serif;
  }
-
- .nav-item {
-     flex-wrap: wrap;
-     padding: 8px 0px 8px 0px;
-     font-family: Nunito, sans-serif;
-     color: rgb(0, 0, 0);
-     font-size: 17px;
-     font-weight: 400;
-     padding: 10px;
-     justify-content: center;
+ @media(max-width:568px){
+    .nav-list{
+        flex-direction:column;
+    }
  }
-
  .hr {
      color: aliceblue;
  }
-
  .hero-section {
      display: flex;
      position: relative;
+ }
+ .hero-content-para{
+    color:greenyellow;
  }
 
  .hero-list {
@@ -68,20 +57,25 @@
 
  .hero-heading {
      display: flex;
-     flex-direction: column;
+     flex-direction:column;
      position: absolute;
-     top: 230px;
-     left: 80px;
-
+     top:230px;
+     left:80px;
  }
-
+ @media(max-width:568){
+    .hero-heading{
+      flex-direction:row; 
+      position:relative;
+      top:430px;
+      left:0px;
+ }
+    }
  .hero-heading p {
      font-size: 20px;
      text-transform: uppercase;
      padding: 10px;
      color: white;
  }
-
  .hero-heading h1 {
      font-size: 38px;
      font-family: sans-serif;
@@ -89,23 +83,19 @@
      color: white;
      padding: 12px;
  }
-
  .hero-heading h3 {
      font-size: 30px;
      font-family: sans-serif;
      color: white;
  }
-
  .hero-heading ul {
      color: white;
      font-size: 24px;
      padding: 15px;
  }
-
  .hero-list li {
      padding: 5px;
  }
-
  .hero-phone {
      margin: 10px;
      color: black;
@@ -115,7 +105,6 @@
      border-radius: 30px;
      width: 300px;
  }
-
  .hero-price {
      border: 0.25px solid black;
      margin: 10px;
@@ -123,7 +112,6 @@
      padding: 6px;
      width: 300px;
  }
-
  .hero-form-container {
      border: none;
      width: 380px;
@@ -142,7 +130,6 @@
      color: black;
      padding: 10px;
  }
-
  form {
      display: flex;
      flex-direction: column;
@@ -159,12 +146,10 @@
          0px 4px 10px rgb(0, 0, 0.);
      border-radius: 12px;
  }
-
  .form-heading {
      margin-top: 25px;
      font-size: 24px;
  }
-
  .hero-form-container form input[type="text"] {
      border: none;
      border-bottom: 2px solid black;
@@ -176,14 +161,12 @@
      background: transparent;
      width: 310px;
  }
-
  .hero-form-container form input[type="text"]::placeholder {
      font-size: 17px;
      color: black;
      background: transparent;
      padding: 12px;
  }
-
  .form-btn {
      display: flex;
      align-items: center;
@@ -216,11 +199,21 @@
      padding: 60px;
      gap: 25px;
      box-sizing: border-box;
+ }
+ @media(width:568px){
+     .overview{
+        flex-direction:column;
+        padding:20px;
 
+     }
  }
 
  .overview-img {
-     height: 500px;
+     height:100%;
+     max-height: 500px;
+     min-width:400px;
+     min-height:500px;
+     max-width:100%;
      width: 500px;
  }
 
@@ -328,24 +321,20 @@
      width: 600px;
      height: 450px;
  }
-
  .upperCard-h3 {
      color: white;
      padding: 10px;
      text-transform: capitalize;
  }
-
  .upperCard-h2 {
      color: white;
      padding: 10px;
      text-transform: capitalize;
  }
-
  .upperCard-para {
      color: white;
      padding: 10px;
  }
-
  .card-upper {
      background-color: rgb(77, 77, 77);
      border: transparent;
@@ -357,7 +346,6 @@
      justify-content: center;
      align-items: center;
  }
-
  .card-lower {
      background-color: white;
      padding: 20px;
@@ -676,12 +664,12 @@
      background: transparent;
      padding: 12px;
  }
-
  .footer-section{
     width:100%;
-    height:20%;
+    height:20vh;
     background-color: black;
  }
- footer-para{
+ .footer-para{
     color:white;
+    padding:30px;
  }
